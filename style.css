@@ -1,11 +1,11 @@
 /* ===== BODY ===== */
 body {
-  background-color: #9494d1; /* fundo azul escuro */
+  background-color: #9494d1;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; /* empilha gato e nome */
-  min-height: 100vh;       /* altura mínima para celular */
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
   font-family: 'Arial', sans-serif;
   color: white;
@@ -19,24 +19,23 @@ body {
 
 /* ===== IMAGEM DO GATO ===== */
 .cat-image {
-  max-width: 90vw; /* ajusta ao tamanho da tela */
-  height: auto;    /* mantém proporção */
+  max-width: 90vw;
+  height: auto;
   display: block;
 }
 
 /* ===== RABO ===== */
 .tail {
   position: absolute;
-  width: 90px;    /* Aumente até cobrir todo o rabo */
-  height: 200px;  /* Aumente até cobrir todo o rabo */
+  width: 15%;         /* largura proporcional à imagem */
+  aspect-ratio: 1/2;  /* garante altura mesmo sem imagem */
+  bottom: 10%;
+  right: 10%;
   cursor: pointer;
   transform-origin: top center;
-  left: 200px;    /* ajuste conforme sua imagem */
-  top: 50px;      /* ajuste conforme sua imagem */
-  /* background-color: rgba(255, 0, 0, 0.2);  <-- ative para testar */
 }
 
-/* ===== ANIMAÇÃO DO RABO ===== */
+/* ===== ANIMAÇÃO ===== */
 @keyframes wag {
   0% { transform: rotate(0deg); }
   25% { transform: rotate(20deg); }
@@ -52,11 +51,6 @@ body {
 /* ===== NOME DO GATO ===== */
 .cat-name {
   margin-top: 10px;
-  font-size: 4vw;       /* ajusta conforme largura da tela */
+  font-size: 4vw;
   text-align: center;
 }
-
-}
-
-
-
