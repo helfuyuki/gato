@@ -1,33 +1,49 @@
 body {
-    background: #caf0f8;
-    text-align: center;
-    font-family: Arial, sans-serif;
+  background-color: #9494d1; /* azul escuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.gato {
-    position: relative;
-    display: inline-block;
+.cat-container {
+  position: relative;
+  display: inline-block;
 }
 
-#gato-img {
-    width: 300px;
+.cat-image {
+  display: block;
+  max-width: 300px; /* ajuste o tamanho da imagem */
 }
 
-.rabo {
-    position: absolute;
-    width: 80px;
-    height: 120px;
-    bottom: 100px;
-    right: 0;
-    cursor: pointer;
+.tail {
+  position: absolute;
+  width: 90px;    /* Aumente até cobrir todo o rabo */
+  height: 200px;  /* Aumente até cobrir todo o rabo */
+  cursor: pointer;
+  transform-origin: top center;
+  left: 200px;    /* ajuste conforme sua imagem */
+  top: 50px;      /* ajuste conforme sua imagem */
+  /* background-color: rgba(255, 0, 0, 0.2);  <-- ative para testar */
 }
 
-/* Quando o mouse passa no rabo → cauda balança */
-.rabo:hover {
-    animation: balanco 0.3s infinite alternate;
+
+/* animação do rabo */
+@keyframes wag {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(20deg); }
+  50% { transform: rotate(-20deg); }
+  75% { transform: rotate(20deg); }
+  100% { transform: rotate(0deg); }
 }
 
-@keyframes balanco {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(20deg); }
+.wagging {
+  animation: wag 0.5s ease-in-out;
+}
+.cat-name {
+  text-align: center;       /* centraliza o texto em relação à imagem */
+  margin-top: 10px;         /* espaço entre a imagem e o nome */
+  font-size: 20px;          /* tamanho da fonte */
+  color: rgb(255, 255, 255);             /* cor do texto */
+  font-family: 'Arial', sans-serif; /* fonte */
 }
