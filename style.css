@@ -1,34 +1,42 @@
+/* ===== BODY ===== */
 body {
-  background-color: #9494d1; /* azul escuro */
+  background-color: #0b1a2b; /* fundo azul escuro */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  flex-direction: column; /* empilha gato e nome */
+  min-height: 100vh;       /* altura mínima para celular */
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: white;
 }
 
+/* ===== CONTAINER DO GATO ===== */
 .cat-container {
   position: relative;
-  display: inline-block;
+  text-align: center;
 }
 
+/* ===== IMAGEM DO GATO ===== */
 .cat-image {
+  max-width: 90vw; /* ajusta ao tamanho da tela */
+  height: auto;    /* mantém proporção */
   display: block;
-  max-width: 300px; /* ajuste o tamanho da imagem */
 }
 
+/* ===== RABO ===== */
 .tail {
   position: absolute;
-  width: 90px;    /* Aumente até cobrir todo o rabo */
-  height: 200px;  /* Aumente até cobrir todo o rabo */
+  width: 15%;      /* proporção da imagem */
+  height: auto;    /* mantém proporção */
+  bottom: 10%;     /* posição relativa à base da imagem */
+  right: 10%;      /* posição relativa à base da imagem */
   cursor: pointer;
   transform-origin: top center;
-  left: 200px;    /* ajuste conforme sua imagem */
-  top: 50px;      /* ajuste conforme sua imagem */
-  /* background-color: rgba(255, 0, 0, 0.2);  <-- ative para testar */
+  /* background-color: rgba(255,0,0,0.2);  <-- ativa para testar */
 }
 
-
-/* animação do rabo */
+/* ===== ANIMAÇÃO DO RABO ===== */
 @keyframes wag {
   0% { transform: rotate(0deg); }
   25% { transform: rotate(20deg); }
@@ -40,11 +48,14 @@ body {
 .wagging {
   animation: wag 0.5s ease-in-out;
 }
+
+/* ===== NOME DO GATO ===== */
 .cat-name {
-  text-align: center;       /* centraliza o texto em relação à imagem */
-  margin-top: 10px;         /* espaço entre a imagem e o nome */
-  font-size: 20px;          /* tamanho da fonte */
-  color: rgb(255, 255, 255);             /* cor do texto */
-  font-family: 'Arial', sans-serif; /* fonte */
+  margin-top: 10px;
+  font-size: 4vw;       /* ajusta conforme largura da tela */
+  text-align: center;
 }
+
+}
+
 
