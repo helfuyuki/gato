@@ -1,0 +1,33 @@
+body {
+    background: #caf0f8;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.gato {
+    position: relative;
+    display: inline-block;
+}
+
+#gato-img {
+    width: 300px;
+}
+
+.rabo {
+    position: absolute;
+    width: 80px;
+    height: 120px;
+    bottom: 100px;
+    right: 0;
+    cursor: pointer;
+}
+
+/* Quando o mouse passa no rabo → cauda balança */
+.rabo:hover {
+    animation: balanco 0.3s infinite alternate;
+}
+
+@keyframes balanco {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(20deg); }
+}
