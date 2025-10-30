@@ -55,3 +55,4 @@ body {
   font-size: 4vw;       /* ajusta conforme largura da tela */
   text-align: center;
 }
+document.getElementById("meow").play()
