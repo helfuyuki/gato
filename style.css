@@ -27,13 +27,13 @@ body {
 /* ===== RABO ===== */
 .tail {
   position: absolute;
-  width: 15%;      /* proporção da imagem */
-  height: auto;    /* mantém proporção */
-  bottom: 10%;     /* posição relativa à base da imagem */
-  right: 10%;      /* posição relativa à base da imagem */
+  width: 90px;    /* Aumente até cobrir todo o rabo */
+  height: 200px;  /* Aumente até cobrir todo o rabo */
   cursor: pointer;
   transform-origin: top center;
-  /* background-color: rgba(255,0,0,0.2);  <-- ativa para testar */
+  left: 200px;    /* ajuste conforme sua imagem */
+  top: 50px;      /* ajuste conforme sua imagem */
+  /* background-color: rgba(255, 0, 0, 0.2);  <-- ative para testar */
 }
 
 /* ===== ANIMAÇÃO DO RABO ===== */
