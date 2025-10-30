@@ -2,21 +2,59 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gato Interativo</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Responsividade da imagem e centralização */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #0b1a2b; /* fundo azul escuro */
+      color: white;
+      font-family: sans-serif;
+    }
+
+    .cat-container {
+      position: relative;
+      text-align: center;
+    }
+
+    .cat-image {
+      max-width: 90vw; /* ajusta ao tamanho da tela */
+      height: auto;
+    }
+
+    .tail {
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background-color: transparent; /* se for animado via JS */
+      cursor: pointer;
+    }
+
+    .cat-name {
+      margin-top: 10px;
+      font-size: 1.5rem;
+    }
+  </style>
 </head>
 <body>
 
-<div class="cat-container">
-  <img src="gato.png" alt="Gato" class="cat-image">
-  <div class="tail" id="tail"></div>
-</div>
+  <div class="cat-container">
+    <img src="gato.png" alt="Gato" class="cat-image">
+    <div class="tail" id="tail"></div>
+    <div class="cat-name">Hel.artz</div> <!-- Nome do gato -->
+  </div>
 
-<audio id="meow" src="miado.mp3"></audio>
+  <audio id="meow" src="miado.mp3"></audio>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-<div class="tail" id="tail"></div>
-  <div class="cat-name">Hel.artz</div> <!-- Nome do gato -->
-</div>
